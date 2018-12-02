@@ -1,0 +1,225 @@
+html {
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'PT Serif', serif;
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.no-select {
+  user-select: none;
+}
+
+/* Top Nav */
+
+.top-nav {
+  display: flex;
+  height: 50px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/*** Content ***/
+
+.grid {
+  display: grid;
+  grid-template-columns: 270px auto;
+  grid-template-rows: 100vh;
+}
+
+/* Left */
+
+.left {
+  z-index: 10;
+  text-align: center;
+  border-right: 1px solid #ebebeb;
+  background-color: #fff;
+  background-image: url('https://www.transparenttextures.com/patterns/brilliant.png');
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.left-title {
+  font-style: italic;
+  margin: 0;
+  padding: 20px 20px 10px 20px;
+  border-bottom: 1px solid #d3d3d3;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.left-logo {
+  display: block;
+
+  width: 100px;
+  height: 100px;
+
+  background-image: url(../img/swansong-no-text-thick.svg);
+  background-size: 100px 100px;
+
+  margin: 0 auto;
+}
+
+.left-experiment-list {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.left-experiment-list-item {
+  padding: 13px 0;
+  transition: 0.1s all linear;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.left-experiment-list-item:hover {
+  border-right: 1px solid #d3d3d3;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.selected {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Right */
+
+.right {
+  background-color: #fff;
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+}
+
+/* Corner */
+
+.right-corner {
+  font-size: 0.9em;
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  display: flex;
+  align-items: center;
+  width: auto;
+  min-width: 150px;
+  transition: 0.5s all ease;
+  border-bottom-left-radius: 10px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.right-corner:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.right-corner-title {
+  flex-basis: 10px;
+  flex-grow: 1;
+  padding: 10px 5px 10px 15px;
+  transition: 0.5s all ease;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.right-corner-title:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.right-corner-github {
+  font-size: 0.8em;
+  flex-basis: 10px;
+  flex-grow: 1;
+  transition: 0.5s all ease;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.right-corner-github:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Intro */
+
+.intro {
+  position: relative;
+  top: 50px;
+  width: 50%;
+  min-width: 600px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 3px solid #ebebeb;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.intro a {
+  transition: 0.5s all ease;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.intro a:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.intro-header {
+  font-size: 2em;
+  width: 80%;
+  text-align: left;
+  border-bottom: 5px solid #829cd0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.intro-paragraph {
+  font-size: 1.2em;
+}
+
+.intro-prompt {
+  font-size: 1em;
+  font-style: italic;
+  text-align: center;
+  text-decoration: underline;
+  opacity: 0.9;
+  color: #6d6d6d;
+}
+
+/* Canvas */
+
+#main-canvas-container {
+  position: relative;
+}
+
+/* Donuts */
+
+.donut-click-prompt {
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  transition: 0.5s all ease;
+  border: 5px solid #ebebeb;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.donut-click-prompt:hover {
+  border: 5px solid #d3d3d3;
+}
